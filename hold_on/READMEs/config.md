@@ -97,14 +97,18 @@ Antes de começar, certifique-se de que tem chaves SSH distintas para cada conta
 
 ```bash
 
-# Conta oficial - diogo-costa-silva
+# chave da Conta oficial - diogo-costa-silva
 ssh-keygen -t ed25519 -C "92042225+diogo-costa-silva@users.noreply.github.com" -f ~/.ssh/id_ed25519_dcs
 
-# Conta de testes - dipedilans
+# chave da Conta de testes - dipedilans
 ssh-keygen -t ed25519 -C "157709256+dipedilans@users.noreply.github.com" -f ~/.ssh/id_ed25519_dd 
 
-```
+# arrancar o agente e guardar as chaves no Keychain
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519_dcs
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519_dd
 
+```
 
 
 ### 4.2. Adicionar Chaves SSH às Contas no GitHub CLI
