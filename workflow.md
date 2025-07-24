@@ -107,6 +107,13 @@ gh auth status -a
   > • git commit -m "feat: …"
   > • git push
 
+<br>
+<br>
+
+---
+
+<br>
+<br>
 
 ### Se quiseres padronizar tudo em main
 
