@@ -387,7 +387,7 @@ gh auth status -a
 ```
 
 
-10. Ciclo diário
+11. Ciclo diário
 
   > • Editar código, testes…
   > • git add "ficheiros"
