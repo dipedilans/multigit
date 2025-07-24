@@ -3,17 +3,28 @@ Eis uma guia completo — passo a passo — para manter **duas contas GitHub** (
 ---
 # **Índice**
 
-1. [Pré-requisitos](#1-pr%C3%A9-requisitos)
-2. [Instalar Git e GitHub CLI](#2-instalar-git-e-github-cli)
-3. [Gerar duas chaves SSH](#3-gerar-duas-chaves-ssh)
-4. [Configurar ssh-agent e o macOS Keychain](#4-configurar-ssh-agent-e-o-macos-keychain)
-5. [Adicionar as chaves às contas GitHub](#5-adicionar-as-chaves-%C3%A0s-contas-github)
-6. [Criar/editar ~/.ssh/config](#6-criareditar-sshconfig)
-7. [Autenticar cada conta na GitHub CLI](#7-autenticar-cada-conta-na-github-cli)
-8. [Criar atalhos rápidos na CLI (gh dcs e gh dd)](#8-criar-atalhos-r%C3%A1pidos-na-cli)
-9. [Configurar identidade de commits em cada repositório](#9-configurar-identidade-de-commits)
-10. [Workflow diário — do zero ao push](#10-workflow-di%C3%A1rio%E2%80%94do-zero-ao-push)
-11. [Verificações rápidas & resolução de problemas](#11-verifica%C3%A7%C3%B5es-r%C3%A1pidas--resolu%C3%A7%C3%A3o-de-problemas)
+- [**Índice**](#índice)
+  - [**1. Pré-requisitos**](#1-pré-requisitos)
+  - [**2. Instalar Git e GitHub CLI**](#2-instalar-git-e-github-cli)
+  - [**3. Gerar duas chaves SSH** (uma por conta)](#3-gerar-duas-chaves-ssh-uma-por-conta)
+  - [**4. Configurar** **ssh-agent**  **e o macOS Keychain**](#4-configurarssh-agent-e-o-macos-keychain)
+  - [**5. Adicionar as chaves às contas GitHub**](#5-adicionar-as-chaves-às-contas-github)
+    - [**Método A — Via interface Web (universal)**](#método-a--via-interface-web-universal)
+    - [**Método B — GitHub CLI**](#método-b--github-cli)
+  - [**6. Criar/editar**  `~/.ssh/config`](#6-criareditar-sshconfig)
+    - [Teste rápido](#teste-rápido)
+  - [**7. Autenticar cada conta na GitHub CLI**](#7-autenticar-cada-conta-na-github-cli)
+  - [**8. Criar atalhos rápidos na CLI**](#8-criar-atalhos-rápidos-na-cli)
+  - [**9. Configurar identidade de commits**](#9-configurar-identidade-de-commits)
+  - [**10. Workflow diário — do zero ao push**](#10-workflow-diário--do-zero-ao-push)
+      - [Checklist rápido](#checklist-rápido)
+- [Workflow completo](#workflow-completo)
+  - [I. Projeto‐exemplo na conta dd (tutorial Streamlit)](#i-projetoexemplo-na-conta-dd-tutorial-streamlit)
+  - [II. Projeto‐exemplo na conta dcs (analytics MotoGP)](#ii-projetoexemplo-na-conta-dcs-analytics-motogp)
+  - [III. Alternar rapidamente entre projectos](#iii-alternar-rapidamente-entre-projectos)
+  - [IV. Dicas de segurança \& depuração](#iv-dicas-de-segurança--depuração)
+  - [**11. Verificações rápidas \& resolução de problemas**](#11-verificações-rápidas--resolução-de-problemas)
+  - [**Resultado**](#resultado)
 
 ---
 ## **1. Pré-requisitos**
@@ -358,8 +369,15 @@ git remote set-url origin \
 git@github-dd:dipedilans/streamlit-tutorial.git
 ```
 
+9. Fazer push novamente
 
-9. Verificações rápidas antes de continuar
+```bash
+git push -u origin main
+#ou
+git push -u origin master
+```
+
+10. Verificações rápidas antes de continuar
 
 ```bash
 # deve mostrar github-dd
