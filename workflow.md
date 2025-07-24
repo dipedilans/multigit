@@ -108,6 +108,26 @@ gh auth status -a
   > • git push
 
 
+### Se quiseres padronizar tudo em main
+
+1.	Muda o ramo remoto (já existente):
+
+```bash
+# ainda dentro de streamlit-tutorial
+git branch -m master main          # renomeia o branch local
+git push -u origin main            # cria main no GitHub
+git push origin --delete master    # (opcional) remove master remoto
+```
+
+2.	Define o nome por omissão para futuros repositórios:
+
+```bash
+git config --global init.defaultBranch main
+```
+
+Assim, sempre que fizeres git init o primeiro branch será main, tal como no guia original.
+
+
 ---
 
 ## II. Projeto‐exemplo na conta dcs (analytics MotoGP)
