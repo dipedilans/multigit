@@ -210,6 +210,11 @@ gh auth status -a
 > • Editar código, análises…
 > • git add / git commit / git push
 
+```bash
+git add workflow.md
+git commit -m "tornar branch standard em  main"
+git push
+```
 
 ---
 
