@@ -1,18 +1,22 @@
-
 # Workflow completo
 
 Duas contas, dois projectos: dd e dcs
 
-Pré-requisitos já configurados
+Pré-requisitos já configurados:
 
-> • Chaves SSH: id_ed25519_dd e id_ed25519_dcs
-> • Hosts SSH no ~/.ssh/config: github-dd e github-dcs
-> • Aliases de CLI GitHub: gh dd e gh dcs
-> • Aliases de identidade Git: gset-dd e gset-dcs
-> • Pasta-raiz onde guardas código: ~/Code/
+• Chaves SSH: id_ed25519_dd e id_ed25519_dcs
+
+• Hosts SSH no ~/.ssh/config: github-dd e github-dcs 
+
+• Aliases de CLI GitHub: gh dd e gh dcs
+
+• Aliases de identidade Git: gset-dd e gset-dcs
+
+• Pasta-raiz onde guardas código: ~/Code/
 
 
 ---
+<br>
 
 ## I. Projeto‐exemplo na conta dd (tutorial Streamlit)
 
